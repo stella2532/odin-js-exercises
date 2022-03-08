@@ -9,27 +9,36 @@ const subtract = function(a,b) {
 };
 
 const sum = function(arr) {
+  /* 
   let finalSum = 0;
   for (i = 0; i < arr.length; i++) {
     finalSum += Number(arr[i]);
   }
   return finalSum;
+  */
+
+  return arr.reduce((total, current) => total + current, 0);
 };
 
 const multiply = function(arr) {
+  /* 
   let mult = 1;
   for (i = 0; i < arr.length; i++) {
     mult *= Number(arr[i]);
   }
-  return mult;
-};
+  return mult; 
+  */
+  return arr.length ? arr.reduce((accumulator, nextItem) => accumulator * nextItem) : 0;};
 
 const power = function(a, x) {
-	let result = 1;
+	/*
+  let result = 1;
   for (i = x; i > 0; i--) {
     result *= a;
   }
   return result;
+  */
+ return Math.pow(a, x);
 };
 
 const factorial = function(a) {
